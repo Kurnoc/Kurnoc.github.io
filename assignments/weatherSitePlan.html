@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Weather Site Plan | Kurnoc.github.io</title>
+  <meta name="description" content="Instructions for building Weather Site Plan">
   <meta name="author" content="Joshua Gregg">
   <meta name="viewport" content="width=device-width">
-</head>
 
-<body>
-<h1>Weather Site Plan</h1>
+</head>
+  <header>
+    <h1>Weather Site Plan</h1>
+    </header>
+  <nav>
+  <a href ="/index.html">Home</a>
+  </nav>
+<main>
+
+
   <h2>Purpose</h2>
-  <p>The purpose of <em><b>The Weather Site</b></em> is to give current weather conditions in 3 differentw ays. the initial page will give the weather for the current location based on the Geocoding location information from the device. The second is weather for 3 specific locations accessible through a dedicated link, and the third is weather for any location determined by a search string.</p>
+  <p>The purpose of <em><b>The Weather Site</b></em> is to give current weather conditions in 3 different ways. The initial page will give the weather for the current location based on the Geocoding location information from the device. The second is weather for 3 specific locations accessible through a dedicated link, and the third is weather for any location determined by a search string.</p>
   <h2>Audience</h2>
   <p>Primary audience is adults ages 18-30. Most will be students. Access to the site will be split between mobile devices and laptops. A secondary audience will be anyone interested in weather.</p>
-  <h2>Audience Goals:</h2>
-  <p>College students move around quite a bit so one goal would be to quickly get the weather conditions for their current location as they head off to class or study. They are also often far form their homes so the ability to quickly get the conditions for a specific location is important as well. The third goal deals with planning for travels...the ability to get weather conditions for any location will help with last minute packing for raod trips.</p>
-  <h2>Persona</h2>
+  <h3>Audience Goals:</h3>
+  <p>College students move around quite a bit so one goal would be to quickly get the weather conditions for their current location as they head off to class or study. They are also often far from their homes so the ability to quickly get the conditions for a specific location is important as well. The third goal deals with planning for travels...the ability to get weather conditions for any location will help with last minute packing for raod trips.</p>
+  <h3>Persona</h3>
   <img src="/pictures/JoeCoolPicture.jpg" alt="Picture of Joe Cool by a pole">
   <ul>
-  <li><b>Name</b>: Joe Cool</li>
+    <li><b>Name</b>: Joe Cool</li>
     <li><b>Occupation</b>: Student</li>
     <li><b>Age</b>: Eternally 18</li>
     <li><b>Interests</b>:Traveling, Flying, Play acting, Eating</li>
@@ -27,26 +36,25 @@
   </ul>
   <h2>Content</h2>
   <p>All weather pages should include location name, current temperature, forecast high, forecast low, current weather descriptor, forecast percentage of precipitation, and current wind speed and direction on small devices and hourly temps should be added on larger screens. The pages of the <em><b>Weather Site</b></em> will be built in the following order:</p>
-  <h2>Pages</h2>
-  <nl>
-  <li><b>Franklin, Greenville, Springfield</b>: weather for each specific location. The weather for these pages should be pulled from the weather ISON file that will be provided.</li>
+  <h3>Pages</h3>
+  <ol>
+    <li><b>Franklin, Greenville, Springfield</b>: weather for each specific location. The weather for these pages should be pulled from the weather JSON file that will be provided.</li>
     <li><b>Home</b>: weather for the current location. Current location should be determined by using the Geolocation API of the browser. This information should be passed to the Weather Underground API (<a href="https://www.wunderground.com/weather/api/">https://www.wunderground.com/weather/api/</a>) to retrieve the current conditions.</li>
-    <li><b>Search</b>: Begins with only a seach box, characters entered will cause a list of suggested matches to appear. Selected location will pull up the weather. The search term from the field should be sent to the <a href="https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1">Weather Underground autocomplete API</a>, and the results used to pull the current conditions for the selected location.</li>
-  </nl>
+    <li><b>Search</b>: Begins with only a search box, characters entered will cause a list of suggested matches to appear. Selected location will pull up the weather. The search term from the field should be sent to the <a href="https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1">Weather Underground autocomplete API</a>, and the results used to pull the current conditions for the selected location.</li>
+  </ol>
   <h2>Styles</h2>
   <h3>Branding</h3>
   <p>The client provided the following initial concept for a name and logo:</p>
   <h2><em><b>The Weather Site</b></em></h2>
-  <p>The name should be bold & italic<br>
-  &#9748;
+  <p>The name should be bold & italic<br> &#9748;
   </p>
   <h3>Typography</h3>
   <p><b>Heading Font</b>: <a href="https://fonts.google.com/specimen/Sansita">Sansita</a> From Google Fonts</p>
-<img src="/pictures/SansitaFontExample.jpg" alt="Example of characters in Sansita">
+  <img src="/pictures/SansitaFontExample.jpg" alt="Example of characters in Sansita">
   <p><b>Body Copy Font</b>: Helvetica</p>
   <img src="/pictures/HelveticaFontExample.jpg" alt="Example of Helvetica in use">
-<h3>Colors</h3>
-  <!-- Color table. Two Rows <table></table> -->
+  <h3>Colors</h3>
+  <img src="/pictures/color-swatches.jpeg" alt="Table of the color scheme for the website">
   <h3>Elements</h3>
   <p>(add title attribute to each anchor)</p>
   <h3>Navigation:</h3>
@@ -54,10 +62,7 @@
   <p>Font and color scheme will be determined by you in consultation with your learning team using the supplied fonts and color swatches.</p>
   <h3>Opaque rounded content box:</h3>
   <img src="/pictures/OpaqueRoundedBox.jpg" alt="Small rounded box with weather">
-  <p>background-color: rgba(200,200,200,.6);<br>
-    margin: .2em auto;<br>
-    border: 1px solid;<br>
-    border-radius: 15px;</p>
+  <p>background-color: rgba(200,200,200,.6);<br> margin: .2em auto;<br> border: 1px solid;<br> border-radius: 15px;</p>
   <h2>Wireframes</h2>
   <h3>Small screen</h3>
   <img src="/pictures/SmallscreenWireframe.jpg" alt="Wireframe for small screen">
@@ -66,5 +71,10 @@
 
 
 
-</body>
+
+  </main>
+  <footer>
+  &copy;2018 | Joshua Gregg
+  </footer>
+
 </html>
