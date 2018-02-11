@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+/* added sansita font */
+
+* {
+  box-sizing: border-box;
+  /* changes width property
+  to total width instead of content width */
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+  display: block;
+  /* just in case we have
+  any older browsers that don't recognize
+  the HTML5 semantic elements */
+}
+
+body {
+  margin: 0;
+  /* remove any margin from body */
+  padding: 0;
+  /* ditto for padding */
+  font-family: Helvetica, Arial, sans-serif;
+  /* added body font */
+  font-size: 20px;
+  /* increased font size */
+}
+
+nav ul li {
+  display: inline-block;
+  /* made navigation horizontal instead of vertical */
+  list-style: none;
+  /* removed bullet points from list items */
+}
+
+nav {
+  line-height: 80%;
+  /* fixed nav height*/
+  position: fixed;
+  /*made nav stay in the same place */
+  bottom: 0;
+  /* made nav go to the bottom */
+  left: 0;
+  /* made nav flush left */
+}
+
+footer {
+  margin-bottom: 2em;
+  /* made visible with nav staying bottom */
+}
+
+#site-brand {
+  font-size: 2em;
+  /* made font larger */
+  font-weight: 200;
+  /* made font thicker/heavier */
+}
+
+#logo {
+  font-size: 100px;
+  /* made logo larger */
+}
+
+#smallConditions {
+  background-color: rgba(200, 200, 200, .6);
+  /* added background color from design page */
+  margin: .2em auto;
+  /* modified spacing */
+  border: 1px solid;
+  /* added border to section */
+  border-radius: 15px;
+  /* rounded corners on border */
+}
+
+#video {
+  background-color: rgba(200, 200, 200, .6);
+  /* added background color from design page */
+  margin: .2em auto;
+  /* modified spacing */
+  border: 1px solid;
+  /* added border to section */
+  border-radius: 15px;
+  /* rounded corners on border */
+}
+
+.tileHeading {
+  display: none;
+  /* removed headings from sections like in the wireframe */
+}
+
+ul li {
+  list-style: none;
+  /* removed bullet points from list items*/
+}
+
+#dailyHigh {
+  color: red;
+  /* made font red */
+}
+
+#dailyLow {
+  color: blue;
+  /* made font blue */
+}
+
+#currentTemp {
+  font-size: 5em;
+  /* made font larger */
+  font-weight: 100;
+  /* made font heavier */
+  margin: 5px;
+  /* fixed margin sizing */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Sansita, Impact, sans-serif;
+  /* added specified font to headings */
+  margin: .2em
+  /* fixed margin gaps*/
+}
+
+#locationInfo {
+  font-size: 80%;
+  /* adjusted font size */
+}
+
+#temps,
+wind {
+  font-size: 90%;
+  /* adjusted font size to better match wireframe*/
+}
+
+.colorOne {
+  background-color: #0e89d5;
+  /* used color scheme color for design */
+}
+
+nav a:link {
+  text-decoration: none;
+  /* removed underline decoration */
+  color: #FFF;
+  /* used color scheme color for design */
+}
+
+nav a:visited {
+  color: #FFF;
+  /* used color scheme color for design */
+}
+
+nav a:hover {
+  color: #6c4ddb;
+  /* used color scheme color for design */
+}
+
+nav a:active {
+  color: #d8f;
+  /* used color scheme color for design */
+}
+
+#curWeather {
+  background-image: url("../../pictures/sunny-winter.jpg");
+  /* added background image */
+  background-size: cover;
+  /* modified the space it took up */
+}
+
+#secondaryColor {
+  background-color: #FFF;
+  /* set specified background color for the main */
+}

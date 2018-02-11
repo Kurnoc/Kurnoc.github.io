@@ -6,13 +6,14 @@
   <meta name="description" content="Franklin weather site based on wireframes">
   <meta name="viewport" content="width=device-width">
   <title> Franklin, ID | Weather Site</title>
+  <link rel="stylesheet" type="text/css" href="/weather/css/screens.css" media="screen">
 </head>
 
 <body>
-  <header>
-    &#9748;
-    <h1>The Weather Site</h1>
-    <nav>
+  <header id="page-header" class="colorOne">
+    <div id="logo">&#9748;</div>
+    <p id="site-brand">The Weather Site</p>
+    <nav class="colorOne">
       <ul>
         <li><a href="/index.html" title="Go to home page">Home</a></li>
         <li><a href="">Current</a></li>
@@ -22,49 +23,51 @@
         <li><a href="">Springfield</a></li>
       </ul>
     </nav>
-    <h2>Franklin, ID</h2>
   </header>
-  <main>
-    <ul>
-      <li><b>Zip:</b>83237 |</li>
-      <li><b>Elevation:</b> 4501 ft. |</li>
-      <li><b>Location:</b>42.0135 N, 111.8072 W</li>
-    </ul>
-    <div>
-      <section>
-        <h3> Temperature</h3>
-        <div>24&#176; F</div>
-        <div>34F 21F</div>
-        <div>Feels Like 21F</div>
+  <main id="secondaryColor">
+    <h1>Franklin, Idaho</h1>
+    <section id="locationInfo">
+      <p><b>Zip:</b>83237 |
+        <b>Elevation:</b> 4501 ft. |
+        <b>Location:</b>42.0135 N, 111.8072 W
+      </p>
+    </section>
+    <!-- curWeather holds temps, wind and video data -->
+    <div id="curWeather">
+      <!-- smallConditions holds temps, wind data -->
+      <div id="smallConditions">
+        <section id="temps">
+          <h3 class="tileHeading"> Temperature</h3>
+          <p id="currentTemp">24&#176; F</p>
+          <p id="dailyHigh">34F</p>
+          <p id="dailyLow"> 21F</p>
+          <p>Feels Like 21F</p>
 
-      </section>
-      <section>
-        <h3>Wind</h3>
-        <p>Circle showing wind MPH image</p>
-        <p><b>Direction</b>: NW<br>
-          <b>Gusts:</b> 5mph
-        </p>
+        </section>
 
-      </section>
-      <section>
-        <h3>Video Forecast</h3>
+        <section id="wind">
+          <h3 class="tileHeading">Wind</h3>
+          <p>2 mph</p>
+          <ul>
+            <li><b>Direction</b>: NW</li>
+            <li><b>Gusts</b>: 5mph</li>
+          </ul>
 
+        </section>
+      </div>
+      <section id="video">
+        <h3 class="tileHeading">Video Forecast</h3>
         <video>
           </video>
       </section>
-      <section>
-        <h3>Hourly Forecast</h3>
-        <p>12am: 21F | 1am: 21F | 2am: 21F | 3am: 20F | 4am: 20F | 5am: 20F | 6am: 20F | 7am: 21F | 8am: 21F |</p>
-      </section>
-
     </div>
-    <div>
-      <p>Compass & Magnifying glass <a href="">Favorites</a></p>
-    </div>
-
+    <section id="hourly">
+      <h3>Hourly Forecast</h3>
+      <p>12am: 21F | 1am: 21F | 2am: 21F | 3am: 20F | 4am: 20F | 5am: 20F | 6am: 20F | 7am: 21F | 8am: 21F | 9am: 28F | 10am: 30F | 11am: 34F | 12pm: 35F | 1pm: 37F | 2pm: 38F | 3pm: 39F | 4pm: 39F | 5pm: 38F | 6pm: 36F | 7pm: 34F | 8pm: 33F | 9pm: 33F | 10pm: 31F | 11pm: 31F |</p>
+    </section>
 
   </main>
-  <footer>
+  <footer class="colorOne">
     &copy; 2018 - The Weather Site
   </footer>
 </body>
