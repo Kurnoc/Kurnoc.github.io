@@ -39,7 +39,7 @@ body {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline-flex;
   /* made navigation horizontal instead of vertical */
   list-style: none;
   /* removed bullet points from list items */
@@ -82,6 +82,7 @@ footer {
   /* added border to section */
   border-radius: 15px;
   /* rounded corners on border */
+  display: flex;
 }
 
 #video {
@@ -93,6 +94,10 @@ footer {
   /* added border to section */
   border-radius: 15px;
   /* rounded corners on border */
+}
+#placeholder {
+  display:flex;
+  justify-content: space-around;
 }
 
 .tileHeading {
@@ -137,19 +142,26 @@ h6 {
 }
 
 #locationInfo {
-  font-size: 80%;
+  font-size: 62%;
   /* adjusted font size */
+  display: flex;
+  justify-content: space-around
 }
 
 #temps,
 wind {
-  font-size: 90%;
+  font-size: 80%;
   /* adjusted font size to better match wireframe*/
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+
 }
 
 .colorOne {
   background-color: #0e89d5;
   /* used color scheme color for design */
+  display: flex;
 }
 
 nav a:link {
@@ -185,3 +197,60 @@ nav a:active {
   background-color: #FFF;
   /* set specified background color for the main */
 }
+
+#windPointer {
+  background: no-repeat center/85% url("../../pictures/wind-pointer.png");
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+}
+
+#hourlyTemps{
+  display: flex;
+  overflow: scroll;
+  justify-content: space-between;
+  margin: .5em;
+}
+#hourlyTemps li{
+  border-right: 1px solid black;
+  justify-content: space-between;
+  padding: .5em;
+}
+#page-header{
+  display: flex;
+}
+#windSpeed{
+  text-align: center;
+  position: relative;
+  bottom: 35%;
+}
+
+/*
+**********************
+Large Screen Code
+**********************
+*/
+@media only screen and (min-width: 700px) {
+
+  #curWeather {
+    display:flex;
+    justify-content: space-around;
+  }
+  nav{
+    position: relative;
+    top: 133px;
+    left: -450px;
+  }
+  .tileHeading{
+    display: flex;
+    justify-content: center;
+  }
+  #locationInfo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  #hourlyTemps {
+    border: 2px solid black;
+    overflow: auto;
+  }
