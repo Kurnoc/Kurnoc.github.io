@@ -1,0 +1,7 @@
+ul li {
+  list-style: none;
+}
+.weatherPicture {
+  border: solid 1px black;
+  margin-bottom: 10px;
+}

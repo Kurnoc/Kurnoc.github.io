@@ -46,7 +46,7 @@ nav ul li {
 }
 
 nav {
-  line-height: 80%;
+/*  line-height: 80%;*/
   /* fixed nav height*/
   position: fixed;
   /*made nav stay in the same place */
@@ -237,9 +237,7 @@ Large Screen Code
     justify-content: space-around;
   }
   nav{
-    position: relative;
-    top: 133px;
-    left: -450px;
+    position: static;
   }
   .tileHeading{
     display: flex;
@@ -254,3 +252,4 @@ Large Screen Code
     border: 2px solid black;
     overflow: auto;
   }
+
