@@ -74,11 +74,12 @@ function windDial(direction){
 // Get data from API
 function getData(LOCALE) {
   const WU_API_KEY = '22c70dfd5f847b6a';
-  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/forecast/q/" + LOCALE + ".json";
   fetch(URL)
     .then(response => response.json())
     .then(function (data) {
     console.log('Json object from getData function');
+    // JSON being saved as the variable 'data'
     console.log(data);
     displayData(data);
   })
@@ -89,4 +90,69 @@ function getData(LOCALE) {
 function displayData(data){
   const STATUS = document.getElementById('status');
   STATUS.innerHTML = 'Getting Location...';
+  // Task 1 - Feed data to WC, Dial and Image functions
+  let CITY_STATE = data.current_observation.display_location.full;
+  console.log(CITY_STATE);
+
+  let ZIP = data.current_observation.display_location.zip;
+  console.log(ZIP);
+
+  let ELEVATION = data.current_observation.display_location.elevation;
+  console.log(ELEVATION);
+
+  let TEMP_FAREN = data.current_observation.temp_f;
+  console.log(TEMP_FAREN);
+
+  let WIND_DIRECTION = data.current_observation.wind_dir;
+  console.log(WIND_DIRECTION);
+
+  let WIND_GUST = data.current_observation.wind_gust_mph;
+  console.log(WIND_GUST);
+
+  let WIND_SPEED = data.current_observation.wind_mph;
+  console.log(WIND_SPEED);
+
+  let CURRENT_WEATHER = data.current_observation.weather;
+  console.log(CURRENT_WEATHER);
+
+  let DAILY_HIGH = data.forecast.simpleforecast.forecastday[0].high.farenheit;
+  console.log(DAILY_HIGH);
+
+  let DAILY_LOW = data.forecast.simpleforecast.forecastday[0].low.farenheit;
+  console.log(DAILY_LOW);
+  // Task 2 - Populate location information
+  document.getElementById('current_place');
+  current_place.innerHTML = CITY_STATE;
+
+  document.getElementById('zipcode');
+  zipcode.innerHTML = ZIP;
+
+  document.getElementById('currentelevation');
+  currentelevation.innerHTML = ELEVATION;
+
+document.getElementById('longlat');
+  longlat.innerHTML = LOCALE;
+
+  document.getElementById('currentTemp');
+  currentTemp.innerHTML = TEMP_FAREN;
+
+  document.getElementById('windPointer');
+  windPointer.innerHTML = WIND_DIRECTION;
+
+  document.getElementById('gust');
+  gust.innerHTML = WIND_GUST;
+
+  document.getElementById('windSpeed');
+  windSpeed.innerHTML = WIND_SPEED;
+
+  document.getElementById('placeholder');
+  placeholder.innerHTML = CURRENT_WEATHER;
+  // Task 3 - Populate weather information (including the wunderground logo and text in footer)
+
+  // Task 4 - Hide status and show main
+
+}
+function metersToFeet(elevation){
+  elevation = Math.round(ELEVATION * 3.28);
+  return elevation;
 }

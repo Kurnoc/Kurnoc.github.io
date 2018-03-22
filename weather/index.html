@@ -31,12 +31,13 @@ Colin Barney
         <li><a href="">Springfield</a></li>
       </ul>
     </nav>
+    <p  id="status"></p>
     <main id="secondaryColor" class="hide">
-      <h1>Franklin, Idaho</h1>
+      <h1 id="current_place">Franklin, Idaho</h1>
       <section id="locationInfo">
-        <p id="status"><b>Zip:</b>83237 |
-          <b>Elevation:</b> 4501 ft. |
-          <b>Location:</b>42.0135 N, 111.8072 W
+        <p><b>Zip</b>:<span id="zipcode">83237</span> |
+          <b>Elevation:</b> <span id="currentelevation">4501</span> ft. |
+          <b>Location:</b><span id='longlat'>42.0135 N, 111.8072 W</span>
         </p>
       </section>
       <!-- curWeather holds temps, wind and video data -->
@@ -59,7 +60,7 @@ Colin Barney
             <p id="windSpeed">2 mph</p>
             <ul>
               <li><b>Direction</b>: NW</li>
-              <li><b>Gusts</b>: 5mph</li>
+              <li id="gust"><b>Gusts</b>: 5mph</li>
             </ul>
           </section>
         </div>
