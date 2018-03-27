@@ -115,10 +115,10 @@ function displayData(data){
   let CURRENT_WEATHER = data.current_observation.weather;
   console.log(CURRENT_WEATHER);
 
-  let DAILY_HIGH = data.forecast.simpleforecast.forecastday[0].high.farenheit;
+  let DAILY_HIGH = data.forecast.simpleforecast[0].high.farenheit;
   console.log(DAILY_HIGH);
 
-  let DAILY_LOW = data.forecast.simpleforecast.forecastday[0].low.farenheit;
+  let DAILY_LOW = data.forecast.simpleforecast[0].low.farenheit;
   console.log(DAILY_LOW);
   // Task 2 - Populate location information
   document.getElementById('current_place');
