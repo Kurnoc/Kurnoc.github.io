@@ -20,7 +20,7 @@ h1, h2{
 }
 
 .home-show{
-  display:none;
+  display:block;
 }
 
 /*-------------------
@@ -115,7 +115,7 @@ Product (Mobile)
 
 
 #product-content{
-  display: flex;
+  display: none;
   flex-flow:column;
 }
 
@@ -176,6 +176,10 @@ END MOBILE CODE
   Body  (Desktop)
   ---------------------*/
 
+  .home-show{
+    display:block;
+  }
+
   /*-------------------
   Nav  (Desktop)
   ---------------------*/
@@ -215,7 +219,7 @@ END MOBILE CODE
   ---------------------*/
 
   #product-content{
-    display: flex;;
+    display: none;
     flex-flow: row;
   }
 
