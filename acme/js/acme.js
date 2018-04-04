@@ -12,7 +12,7 @@ function getData() {
       // JSON being saved as the variable 'data'
       jsonData = data;
       putNav();
-      displayProduct();
+
     })
     .catch(error => console.log('There was an error: ', error))
 }
@@ -34,23 +34,98 @@ function putNav() {
   }
 }
 
-function displayProduct() {
-  document.getElementById('product-picture').src = jsonData.ACMEData.Anvils.path;
-  console.log("Displaying Product Picture");
+document.getElementById('navItems').onclick = function(event) {
+  let NAVIGATION = event.target.innerHTML;
+  console.log("NAV: " + NAVIGATION);
 
-  document.getElementById('product-name').innerHTML = jsonData.ACMEData.Anvils.name;
-  console.log("Displaying Product Name");
+  if (NAVIGATION == "Anvils") {
 
-  document.getElementById('product-description').innerHTML = jsonData.ACMEData.Anvils.description;
-  console.log("Displaying Product Description");
+    document.getElementById('home-content').style.display = 'none';
+    document.getElementById('product-content').style.display = 'flex';
 
-  document.getElementById('product-manufacture').innerHTML = jsonData.ACMEData.Anvils.manufacturer;
-  console.log("Displaying Product Manufacturer");
+    document.getElementById('product-picture').src = jsonData.ACMEData.Anvils.path;
 
-  document.getElementById('product-review').innerHTML = jsonData.ACMEData.Anvils.reviews;
-  console.log("Displaying Product Reviews");
 
-  document.getElementById('product-price').innerHTML = jsonData.ACMEData.Anvils.price;
-  console.log("Displaying Product Price")
+    document.getElementById('product-name').innerHTML = jsonData.ACMEData.Anvils.name;
 
-}
+
+    document.getElementById('product-description').innerHTML = jsonData.ACMEData.Anvils.description;
+
+
+    document.getElementById('product-manufacture').innerHTML = jsonData.ACMEData.Anvils.manufacturer;
+
+
+    document.getElementById('product-review').innerHTML = jsonData.ACMEData.Anvils.reviews;
+
+
+    document.getElementById('product-price').innerHTML = jsonData.ACMEData.Anvils.price;
+
+
+  }else if (NAVIGATION == "Explosives"){
+    document.getElementById('home-content').style.display = 'none';
+    document.getElementById('product-content').style.display = 'flex';
+
+      document.getElementById('product-picture').src = jsonData.ACMEData.Explosives.path;
+
+
+      document.getElementById('product-name').innerHTML = jsonData.ACMEData.Explosives.name;
+
+
+      document.getElementById('product-description').innerHTML = jsonData.ACMEData.Explosives.description;
+
+
+      document.getElementById('product-manufacture').innerHTML = jsonData.ACMEData.Explosives.manufacturer;
+
+
+      document.getElementById('product-review').innerHTML = jsonData.ACMEData.Explosives.reviews;
+
+
+      document.getElementById('product-price').innerHTML = jsonData.ACMEData.Explosives.price;
+
+
+    } else if (NAVIGATION == "Decoys"){
+      document.getElementById('home-content').style.display = 'none';
+      document.getElementById('product-content').style.display = 'flex';
+
+      document.getElementById('product-picture').src = jsonData.ACMEData.Decoys.path;
+
+
+      document.getElementById('product-name').innerHTML = jsonData.ACMEData.Decoys.name;
+
+
+      document.getElementById('product-description').innerHTML = jsonData.ACMEData.Decoys.description;
+
+
+      document.getElementById('product-manufacture').innerHTML = jsonData.ACMEData.Decoys.manufacturer;
+
+
+      document.getElementById('product-review').innerHTML = jsonData.ACMEData.Decoys.reviews;
+
+
+      document.getElementById('product-price').innerHTML = jsonData.ACMEData.Decoys.price;
+
+    } else if (NAVIGATION == "Traps"){
+      document.getElementById('product-picture').src = jsonData.ACMEData.Traps.path;
+
+
+      document.getElementById('product-name').innerHTML = jsonData.ACMEData.Traps.name;
+
+
+      document.getElementById('product-description').innerHTML = jsonData.ACMEData.Traps.description;
+
+
+      document.getElementById('product-manufacture').innerHTML = jsonData.ACMEData.Traps.manufacturer;
+
+
+      document.getElementById('product-review').innerHTML = jsonData.ACMEData.Traps.reviews;
+
+
+      document.getElementById('product-price').innerHTML = jsonData.ACMEData.Traps.price;
+    } else {
+
+      document.getElementById('home-content').style.display = 'block';
+      document.getElementById('product-content').style.display = 'none';
+    }
+  }
+
+

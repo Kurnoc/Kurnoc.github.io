@@ -113,9 +113,6 @@ Recipies & Reviews (Mobile)
 Product (Mobile)
 ---------------------*/
 
-.product-hide{
-  display:
-}
 
 #product-content{
   display: flex;
@@ -218,7 +215,7 @@ END MOBILE CODE
   ---------------------*/
 
   #product-content{
-    display: flex;
+    display: flex;;
     flex-flow: row;
   }
 
