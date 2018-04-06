@@ -35,6 +35,7 @@ Nav  (Mobile)
 #navItems {
   list-style: none;
   display: flex;
+  font-size: 4.5vw;
 }
 
 #navBar ul li {
@@ -94,11 +95,13 @@ Recipies & Reviews (Mobile)
   display: flex;
   flex-direction:column;
   flex-wrap: wrap;
+  padding-left: 0px;
 }
 
 #recipies li{
   list-style: none;
   text-align: center
+
 }
 
 #bottomHalf{

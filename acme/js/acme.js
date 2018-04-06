@@ -42,6 +42,7 @@ document.getElementById('navItems').onclick = function(event) {
 
     document.getElementById('home-content').style.display = 'none';
     document.getElementById('product-content').style.display = 'flex';
+    document.getElementById('page-title').innerHTML = 'ACME Anvils'
 
     document.getElementById('product-picture').src = jsonData.ACMEData.Anvils.path;
 
@@ -64,6 +65,7 @@ document.getElementById('navItems').onclick = function(event) {
   }else if (NAVIGATION == "Explosives"){
     document.getElementById('home-content').style.display = 'none';
     document.getElementById('product-content').style.display = 'flex';
+    document.getElementById('page-title').innerHTML = 'ACME Explosives'
 
       document.getElementById('product-picture').src = jsonData.ACMEData.Explosives.path;
 
@@ -86,6 +88,7 @@ document.getElementById('navItems').onclick = function(event) {
     } else if (NAVIGATION == "Decoys"){
       document.getElementById('home-content').style.display = 'none';
       document.getElementById('product-content').style.display = 'flex';
+      document.getElementById('page-title').innerHTML = 'ACME Decoys'
 
       document.getElementById('product-picture').src = jsonData.ACMEData.Decoys.path;
 
@@ -105,6 +108,7 @@ document.getElementById('navItems').onclick = function(event) {
       document.getElementById('product-price').innerHTML = jsonData.ACMEData.Decoys.price;
 
     } else if (NAVIGATION == "Traps"){
+      document.getElementById('page-title').innerHTML = 'ACME Traps'
       document.getElementById('product-picture').src = jsonData.ACMEData.Traps.path;
 
 
