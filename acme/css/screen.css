@@ -186,7 +186,11 @@ END MOBILE CODE
   /*-------------------
   Nav  (Desktop)
   ---------------------*/
-
+  #navItems {
+    list-style: none;
+    display: flex;
+    font-size: 36px;
+  }
   /*-------------------
   Footer  (Desktop)
   ---------------------*/
